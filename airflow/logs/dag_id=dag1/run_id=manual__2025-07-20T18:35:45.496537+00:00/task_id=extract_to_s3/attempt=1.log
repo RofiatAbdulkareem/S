@@ -1,0 +1,31 @@
+[2025-07-20T18:35:50.331+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-20T18:35:50.369+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag1.extract_to_s3 manual__2025-07-20T18:35:45.496537+00:00 [queued]>
+[2025-07-20T18:35:50.382+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag1.extract_to_s3 manual__2025-07-20T18:35:45.496537+00:00 [queued]>
+[2025-07-20T18:35:50.383+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-07-20T18:35:50.405+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_to_s3> on 2025-07-20 18:35:45.496537+00:00
+[2025-07-20T18:35:50.417+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=577) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-20T18:35:50.420+0000] {standard_task_runner.py:63} INFO - Started process 579 to run task
+[2025-07-20T18:35:50.421+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag1', 'extract_to_s3', 'manual__2025-07-20T18:35:45.496537+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/app_dag.py', '--cfg-path', '/tmp/tmp7_rnrnuh']
+[2025-07-20T18:35:50.423+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask extract_to_s3
+[2025-07-20T18:35:50.521+0000] {task_command.py:426} INFO - Running <TaskInstance: dag1.extract_to_s3 manual__2025-07-20T18:35:45.496537+00:00 [running]> on host 75e48cf8ec49
+[2025-07-20T18:35:50.685+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='rofiat' AIRFLOW_CTX_DAG_ID='dag1' AIRFLOW_CTX_TASK_ID='extract_to_s3' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T18:35:45.496537+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T18:35:45.496537+00:00'
+[2025-07-20T18:35:50.688+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-20T18:35:53.855+0000] {logging_mixin.py:188} INFO - Data written to s3 successfully
+[2025-07-20T18:35:53.855+0000] {python.py:237} INFO - Done. Returned value was:    gender                           email           phone            cell
+0  female     hilla.heikkinen@example.com      03-928-598   044-534-66-79
+1  female      violet.wallace@example.com    08-7709-6562    0425-081-734
+2  female      malene.kvandal@example.com        33257629        98738782
+3  female        emma.edwards@example.com  (271)-035-3613  (270)-884-7820
+4  female       ana.brankovic@example.com    014-5160-595    066-2653-839
+5  female        vanessa.lima@example.com  (61) 5033-0180  (23) 0624-6932
+6  female  corianne.vandelaak@example.com   (040) 3939551   (06) 66440263
+7  female      elifaza.santos@example.com  (29) 0325-8146  (82) 7976-9974
+8    male        miro.saarela@example.com      03-722-118   045-940-53-99
+9  female    teresa.armstrong@example.com    015396 42839    07898 401183
+[2025-07-20T18:35:53.901+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-20T18:35:53.978+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=dag1, task_id=extract_to_s3, execution_date=20250720T183545, start_date=20250720T183550, end_date=20250720T183553
+[2025-07-20T18:35:54.052+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-07-20T18:35:54.108+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-20T18:35:54.114+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
