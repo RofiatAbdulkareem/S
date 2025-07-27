@@ -1,5 +1,5 @@
 import pandas as pd
-from tests.etl import clean_data, load_data
+from etl import clean_data, load_data
 
 def test_clean_data_remove_nulls():
     """
