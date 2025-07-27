@@ -15,4 +15,4 @@ def test_clean_data_has_integer_age():
     """
     df = load_data()
     cleaned_df = clean_data(df)
-    assert cleaned_df['age'].dtype == 'int64', "Age column should be of type int64 after cleaning."
+    assert cleaned_df['age'].dtype == 'int64', "Age column should be of type int64."
