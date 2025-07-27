@@ -14,6 +14,6 @@ def load_data():
     """
     data = {
         'name': ['Alice', 'Bob', 'Charlie', None],
-        'age': [25, 30, 22]
+        'age': [25, 30, 22,13]
     }
     return pd.DataFrame(data)
